@@ -23,7 +23,7 @@
                     <img src="images/calendar-today.svg" alt="today" class="nav-icons">
                     <div>Today</div>
                 </div>
-                <div class="task-nav schedule-task">
+                <div class="task-nav scheduled-task">
                     <img src="images/calendar-month.svg" alt="scheduled" class="nav-icons">
                     <div>Scheduled</div>
                 </div>
@@ -37,7 +37,7 @@
                     <div class="project-hdr">Projects</div>
                     <button class="newProject sb-btn">Add A Project</button>
                 </div>
-                <div class="project-Container"></div>
+                <div class="projectContainer"></div>
             </div>
         </div>
         <div class="main-content">
@@ -49,7 +49,7 @@
             <form id="newTaskModalForm">
                 <div class="input-rows">
                     <label for="title">Title</label>
-                    <input type="text" name="title" id="title" required autocomplete="off" oninput="this.setCustomValidate('')">
+                    <input type="text" name="title" id="title" required autocomplete="off" oninput="this.setCustomValidity('')">
                 </div>
                 <div class="input-rows">
                     <label for="description">Description</label>
@@ -73,15 +73,15 @@
                 </div>
                 <div class="task-form-btns">
                     <button class="cancel detached-border-button">Cancel</button>
-                    <button  type="submit" class="cancel detached-border-button" id="CreateTask"></button>
+                    <button type="submit" class="detached-border-button" id="createTask">Create Task</button>
                 </div>
             </form>
         </dialog>
         <form id="createProjectForm">
-            <input type="text" id="project-name" placeholder="Enter Project Name" required autocomplete="off" oninput="this.setCustomValidate('')" minlength="3" maxlength="20">
+            <input type="text" id="project-name" placeholder="Enter Project Name" required autocomplete="off" oninput="this.setCustomValidity('')" minlength="3" maxlength="20">
             <div class="pr-form-btn">
                 <button class="cancelP">Cancel</button>
-                <button id="createProject" type="submit"></button>
+                <button id="createProject" type="submit">Create Project</button>
             </div>
         </form>
         <div class="error">
